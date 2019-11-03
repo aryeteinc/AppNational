@@ -1,0 +1,16 @@
+
+		School Name => Bluffdale Elementary School 
+		School Address => 14323 S 2700 W 
+		Coach => Jose F Florez Mercado 
+		Cellphone => 3856301964  
+		School City => Bluffdale 
+		School State => Utah 		
+		School Zip => 84065  
+		Email => aryeteinc@gmail.com 
+		Location => Atlanta  
+		Date Location => June 12 - 14 
+		First Day => Morning Evening  
+		Second Day => Afternoon Evening 
+		Estimated Day => 06/11/2020   
+
+		

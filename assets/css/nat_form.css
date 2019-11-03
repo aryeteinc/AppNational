@@ -1,0 +1,72 @@
+.cabecera{
+	background-image: url("imgnational/commond/logo_azul.png");
+	background-color: #275E84;
+	height: 230px;	
+	background-repeat: no-repeat, repeat;
+}
+
+
+.name-emprise{
+	font-family: 'Alex Brush', cursive;	
+	font-size: 2.5em;	
+}
+
+.contenedor{
+	position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.logo-azul{	
+	margin:auto;	
+	position: absolute;
+	z-index: 0;	
+	left: 40%;
+	right: 50%;
+	top:10%;
+}
+
+.texto-sup-pegado{
+	margin: 5px;
+}
+
+.texto-inf-pegado{
+	margin-top: -25px;
+}
+
+.parrafo{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+
+}
+
+.formulario{
+	background-color: #F2F2F2 !important;
+}
+
+
+@media (max-width: 600px) {
+	.name-emprise{
+		font-family: 'Alex Brush', cursive;
+		color:#FFFFFF;
+		font-size: 1.5em;	
+	}
+
+	.texto-inf-pegado{
+	 margin-top: -15px;
+    }
+
+    .parrafo{
+		font-family: 'Roboto', sans-serif;
+		font-size: 10px;
+	}
+
+	.logo-azul{	
+		margin:auto;	
+		position: absolute;
+		z-index: 0;	
+		left: 20%;
+		right: 50%;
+		top:10%;		
+	}
+}

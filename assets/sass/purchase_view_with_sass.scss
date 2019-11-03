@@ -1,0 +1,40 @@
+@mixin sizes($width, $height: $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin prefixer($property, $value) {
+  //$prefixes: webkit moz ms o;
+  #{$property}: #{$value};
+  @each $prefix in webkit moz ms o {
+    #{'-' + $prefix + '-' + $property}: #{$value};
+  }
+}
+
+@mixin transition($value: .15s) {
+  @include prefixer(transition, $value);
+}
+
+.box  {
+  background-color: red;
+
+  // declarando mixins
+  @include sizes(200px);
+  @include transition(0.4s);
+  &.active {
+    @include sizes(300px);
+  }
+}
+
+
+$colors: (
+  twitter: #55acee,
+  facebook:  #3a5795,
+  send-mail: #C25E30
+);
+
+@each $name-color, $bgcolor in $colors {
+    .btn--#{$name-color} {
+        background-color: $bgcolor;
+    }
+}

@@ -1,0 +1,23 @@
+.box {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s; }
+  .box.active {
+    height: 300px;
+    width: 300px; }
+
+.btn--twitter {
+  background-color: #55acee; }
+
+.btn--facebook {
+  background-color: #3a5795; }
+
+.btn--send-mail {
+  background-color: #C25E30; }
+
+/*# sourceMappingURL=purchase_view_with_sass.css.map */

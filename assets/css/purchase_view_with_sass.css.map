@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAiBA,IAAM;EACJ,gBAAgB,EAAE,GAAG;EAjBrB,MAAM,EAoBS,KAAK;EAnBpB,KAAK,EAmBU,KAAK;EAdpB,UAAY,EAAE,IAAS;EAErB,kBAAkC,EAAE,IAAS;EAA7C,eAAkC,EAAE,IAAS;EAA7C,cAAkC,EAAE,IAAS;EAA7C,aAAkC,EAAE,IAAS;EAc/C,WAAS;IAtBT,MAAM,EAuBW,KAAK;IAtBtB,KAAK,EAsBY,KAAK;;AAYpB,aAAqB;EACjB,gBAAgB,EAPb,OAAO;;AAMd,cAAqB;EACjB,gBAAgB,EANX,OAAO;;AAKhB,eAAqB;EACjB,gBAAgB,EALX,OAAO",
+"sources": ["../sass/purchase_view_with_sass.scss"],
+"names": [],
+"file": "purchase_view_with_sass.css"
+}
