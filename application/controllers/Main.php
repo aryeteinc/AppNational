@@ -9,9 +9,7 @@ class Main extends CI_Controller {
 		parent::__construct();	
 		$this->load->model('Main_model');
 		$this->load->library('utilities');
-		$this->plantilla_email = "email/plantillas/plantilla_email_national";
-		
-					
+		$this->plantilla_email = "email/plantillas/plantilla_email_national";					
 	}	
 
 	public function index(){

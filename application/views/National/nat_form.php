@@ -16,27 +16,18 @@
 <body>
 
 	<div class="container-fluid cabecera">
-
 		<div class="container">
-
-			<div class="row contenedor">				
-
+			<div class="row contenedor">
 				<div class="col-lg-4 col-xs-12 name-emprise text-white">
 					<p class="texto-sup-pegado">National Academic </p>
 					<p class="texto-inf-pegado">Championship.</p>
 				</div>
 
-
-				<img class="logo-azul" src="imgnational/commond/logo_azul.png" alt="" width="210" height="180">
-				
-								
-			
+				<img class="logo-azul" src="imgnational/commond/logo_azul.png" alt="" width="210" height="180">			
 				<div class="col-lg-12 col-xs-12">
 					<p class="parrafo text-capitalize text-white-50">
-						If you’re registering for the national academic championship and wish to pay by check, do not send it to our old address, as it probably won’t reach us.
-				
-						The address for question orders remains the same, but the new address for the national academic championship is	<br>	
-
+						If you’re registering for the national academic championship and wish to pay by check, do not send it to our old address, as it probably won’t reach us.				
+						The address for question orders remains the same, but the new address for the national academic championship is	<br>
 						<span class="col-12 bg-danger rounded"> 
 							<b>								
 								10688 S. Dimple Dell Dr.
@@ -44,16 +35,13 @@
 							</b>
 						</span>			
 					</p>
-				</div>
-				
+				</div>				
 			</div>
 		</div>
 	</div>
 
 	<!-- Fin de la cabecera azul -->
 	<br>
-
-
 	<div class="container-fluid cuerpo">
 		<div class="container formulario py-5 border rounded">
 			<div class="row py-2">
