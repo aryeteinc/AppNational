@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
 
 	private $plantilla_email;
+	private $datosFormulario;
 
 	public function __construct() {	
 		parent::__construct();	
@@ -74,19 +75,19 @@ class Main extends CI_Controller {
 			//print_r($this->utilities->JornadasEscogidas($datosForm['FirstDay'],$datosForm['SecondDay'])[0]);
 
         	//Armamos el array con los campos provenientes del Formulario
-        	$data = array (
-        		'SchoolName' => trim($datosForm['SchoolName']),
-        		'SchoolAddress' => $datosForm['SchoolAddress'],
-        		'SchoolCity' => $datosForm['SchoolCity'], 
-    			'SchoolState' => $datosForm['SchoolState'], 
-    			'SchoolZip' => $datosForm['SchoolZip'], 
-    			'Coach' => $datosForm['Coach'], 
-    			'Cellphone' => $datosForm['Cellphone'], 
-    			'Email' => $datosForm['Email'], 
+			$data = array (
+				'SchoolName' => trim($datosForm['SchoolName']),
+				'SchoolAddress' => $datosForm['SchoolAddress'],
+				'SchoolCity' => $datosForm['SchoolCity'], 
+				'SchoolState' => $datosForm['SchoolState'], 
+				'SchoolZip' => $datosForm['SchoolZip'], 
+				'Coach' => $datosForm['Coach'], 
+				'Cellphone' => $datosForm['Cellphone'], 
+				'Email' => $datosForm['Email'], 
 				'Location' => $this->Main_model->getCity($datosForm['Location'])['name'],
 				'dateLocation' => $this->Main_model->getCity($datosForm['Location'])['date'],
-    			'Level' => $datosForm['Level'],
-    			'FirstDay' => $this->utilities->devolverFormato($listaFirstday),
+				'Level' => $datosForm['Level'],
+				'FirstDay' => $this->utilities->devolverFormato($listaFirstday),
 				'SecondDay' => $this->utilities->devolverFormato($listaSecondday),
 				'urlPicture' => $this->Main_model->getCity($datosForm['Location'])['picture'],
 				'EstimatedDate' => $datosForm['EstimatedDate'],
@@ -98,7 +99,9 @@ class Main extends CI_Controller {
 				'Price' => $this->Main_model->getPrice(),
 				'Discount' => $this->Main_model->getDiscount()
 			);	
-			$this->parser->parse('National/purcharse_view',$data);	
+			$this->datosFormulario = $data;
+			//$this->parser->parse('National/purcharse_view',$data);	
+			$this->parser->parse($this->plantilla_email,$data);
         }		
 	}
 
@@ -173,14 +176,14 @@ class Main extends CI_Controller {
 		";
 		//return $datosToLog->CellPhone;
 		if ( ! write_file(FCPATH."/logs/test.txt",$estructura )){
-        	echo 'Unable to write the file';
+			echo 'Unable to write the file';
 		}else{
-        	echo 'File written!';
+			echo 'File written!';
 		}
 	}
 
 	public function success(){
-		$this->load->view($this->plantilla_email);
+		$this->parser->parse($this->plantilla_email,$this->datosFormulario);
 		
 	}
 }

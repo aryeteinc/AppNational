@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/nat_form.css")?>">
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  	<link rel="stylesheet" href="/resources/demos/style.css">	
+	<link rel="stylesheet" href="/resources/demos/style.css">	
 	<script src="https://kit.fontawesome.com/f16e0af666.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
 
