@@ -167,7 +167,7 @@
 							</div>
 
 							<div class="form-group col-lg-2 col-xs-12">
-								<label for="FirstDay">First Day
+								<label for="FirstDay">Not scheduled
 									<span class="text-danger"
 									data-toggle="tooltip" data-placement="top"
 									title="For your convenience and enjoyment while you're at Nationals, you are welcome to choose one time frame, below, during which you DO NOT WANT YOUR GAMES SCHEDULED, for the purpose of sightseeing or for any other reason. You needn't choose any time slots if you have no preference.">
@@ -213,7 +213,7 @@
 							</div>	
 							<div class="form-group col-lg-2 col-xs-12">
 								<label for="EstimatedTime">Estimated Hour of arrival</label>
-								<input type="time" class="form-control" id="EstimatedTime" aria-describedby="stHelp" placeholder="" name="EstimatedDate" value="<?php echo set_value('EstimatedTime'); ?>">
+								<input type="time" class="form-control" id="EstimatedTime" aria-describedby="stHelp" placeholder="" name="EstimatedTime" value="<?php echo set_value('EstimatedTime'); ?>">
 								<small id="stHelp" class="form-text text-muted"></small>
 							</div>						
 						</div>
@@ -226,9 +226,9 @@
 									title="Credit Card, we used Paypal service for all transactions">
 										(?)
 									</span></label>
-								<select class="custom-select" id="MethodPayment" name="MethodPayment">
-									<option selected value="CreditCard" 
-									<?php echo  set_select('MethodPayment', 'CreditCard', TRUE); ?>>
+								<select class="custom-select" id="mp" name="mp">
+									<option selected value="Credit Card" 
+									<?php echo  set_select('MethodPayment', 'Credit Card', TRUE); ?>>
 										Paypal
 									</option>
 									<option value="Check" 

@@ -50,7 +50,7 @@ class Main_model extends CI_Model {
     }
 
     public function getPrice(){
-        return number_format(800,2);
+        return number_format(800);
     }
 
     public function getDiscount(){

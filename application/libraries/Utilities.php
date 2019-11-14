@@ -14,7 +14,7 @@ class Utilities{
         );
     }
 
-    public function JornadasEscogidas($firstDay, $secondDay){         
+    public function JornadasEscogidas($firstDay){         
         /*
             Esta funcion se encargara
             de determinar el horario que las escuelas
@@ -26,13 +26,13 @@ class Utilities{
         */
 
         $fd = array($firstDay);
-        $sd = array($secondDay);
+        //$sd = array($secondDay);
 
         //Calculamos la diferencia entre los arrays
         $resultadoFd = ($firstDay !== 'no')?array_diff($this->arrayJornadas, $fd):$this->arrayJornadas;
-        $resultadoSd = ($secondDay !== 'no')?array_diff($this->arrayJornadas, $sd):$this->arrayJornadas;
+        //$resultadoSd = ($secondDay !== 'no')?array_diff($this->arrayJornadas, $sd):$this->arrayJornadas;
         
-        return array($resultadoFd,$resultadoSd);
+        return array($resultadoFd);
 
     }
 

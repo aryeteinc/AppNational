@@ -14,34 +14,55 @@ class Cemail
     public function __construct(){
         $this->ci =& get_instance();
         $this->ci->load->library('email');   
-        $config['protocol'] = 'smtp';
-        $config['smtp_host'] = 'smtp.qunlimited.com';
-        $config['smtp_port'] = '587';
-        $config['smtp_timeout'] = '30';
-        $config['smtp_user'] = 'admin@qunlimited.com';
-        $config['smtp_pass'] = '288paq03';
-        $config['charset'] = 'utf-8';
-        $config['mailtype'] = 'html';
-        $config['wordwrao'] = TRUE;
-        $config['newline'] ="\r\n";
-        $config['crlf'] ="\r\n";
-        $this->ci->email->initialize($config);	
-        $this->ci->email->from('admin@qunlimited.com','NAT');
-        $this->ci->email->to('aryeteinc@gmail.com');
-        $this->ci->email->subject('Test');
-        $this->ci->email->message('Email de test');		
-        $this->ci->email->send();    
+        // $config['protocol'] = 'smtp';
+        // $config['smtp_host'] = 'smtp.qunlimited.com';
+        // $config['smtp_port'] = '587';
+        // $config['smtp_timeout'] = '30';
+        // $config['smtp_user'] = 'admin@qunlimited.com';
+        // $config['smtp_pass'] = '288paq03';
+        // $config['charset'] = 'utf-8';
+        // $config['mailtype'] = 'html';
+        // $config['wordwrao'] = TRUE;
+        // $config['newline'] ="\r\n";
+        // $config['crlf'] ="\r\n";
+        // $this->ci->email->initialize($config);	
+        // $this->ci->email->from('admin@qunlimited.com','NAT');
+        // $this->ci->email->to('aryeteinc@gmail.com');
+        // $this->ci->email->subject('Test');
+        // $this->ci->email->message('Email de test');		
+        //$this->ci->email->send();    
     }
 
-    public function Sendemail(){
-        $this->ci->email->from($this->from, 'National Academic Championship');
-        $this->ci->email->to($this->mailWebmaster);
-        //$this->email->cc('another@another-example.com');
-        //$this->email->bcc('them@their-example.com');
+    public function Sendemail($mensaje){
 
-        $this->ci->email->subject('Email Test');
-        $this->ci->email->message('Testing the email class.');
-        $this->ci->email->send();
+        $config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'ssl://smtp.googlemail.com';
+		$config['smtp_port'] = '465';
+		$config['smtp_timeout'] = '5';
+		$config['smtp_user'] = 'qunlimitedwm@gmail.com';
+		$config['smtp_pass'] = 'qiznqwwlvbydmifz'; //Es la contraseña de aplicacion es diferente a la contrasena original
+		$config['charset'] = 'utf-8';
+		$config['mailtype'] = 'html';
+		$config['wordwrap'] = TRUE;
+		$config['newline'] ="\r\n";
+		$config['crlf'] ="\r\n";
+		$this->ci->email->initialize($config);	
+		$this->ci->email->from('qunlimitedwm@gmail.com','NAT');
+		$this->ci->email->to('aryeteinc@gmail.com');
+		$this->ci->email->subject('Test');
+		$this->ci->email->message($mensaje);		
+		//$this->email->send();
+		if ($this->ci->email->send()) {
+            echo 'Your Email has successfully been sent.';
+        } else {
+            show_error($this->ci->email->print_debugger());
+        }
+        
+        //$this->ci->email->send();
+    }
+
+    public function mensaje ($datos){
+        return $datos;
     }
 
     
